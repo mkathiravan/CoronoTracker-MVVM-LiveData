@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".MainActivity">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+        <TextView
+            android:id="@+id/total_count"
+            android:text="total"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/no_indian"
+                tools:text="total"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/total_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/no_foreign"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_below="@+id/no_indian"
+                tools:text="total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/discharged"
+                android:layout_below="@+id/no_foreign"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:gravity="center"
+                tools:text="total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/no_deaths"
+                android:layout_below="@+id/discharged"
+                tools:text="total"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="#FF0000"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/no_unidentified"
+                android:layout_below="@+id/no_deaths"
+                tools:text="total"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/blogRecyclerView"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/no_unidentified"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
